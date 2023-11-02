@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 const sendEmail = async (nombre, correo, telefono, observaciones) => {
-  console.log(nombre, correo, telefono, observaciones)
+  
   const configMail = {
     host: "smtpout.secureserver.net",
     port: 465,
