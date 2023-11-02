@@ -61,7 +61,7 @@ const sendEmail = async (nombre, correo, telefono, observaciones) => {
 };
 
 const corsOptions = {
-  origin: "https://javiers-fence.com/", //'https://javiers-fence.com/', // Cambia esto al origen de tu aplicación cliente
+  origin: "*", //'https://javiers-fence.com/', // Cambia esto al origen de tu aplicación cliente
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true, // Permite el envío de cookies y encabezados de autenticación
   optionsSuccessStatus: 204, // Devuelve un código de estado 204 si la opción Preflight es exitosa
