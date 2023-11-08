@@ -88,8 +88,9 @@ app.post("/saveInfoClient", (req, res) => {
         [nombre, telefono, correo, observaciones]
       );
 
-      sendEmail(nombre, correo, telefono, observaciones);
+      
       res.status(200).json({ data: "guardado correctamente" });
+      sendEmail(nombre, correo, telefono, observaciones);
     } catch (error) {
       console.log(error);
       res.status(500).json({ error });
