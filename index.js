@@ -57,7 +57,7 @@ const sendEmail = async (nombre, correo, telefono, observaciones) => {
   };
 
   const info = await transport.sendMail(mensaje);
-  //console.log(info);
+  console.log(info);
 };
 
 const corsOptions = {
@@ -90,6 +90,7 @@ app.post("/saveInfoClient", (req, res) => {
 
       
       res.status(200).json({ data: "guardado correctamente" });
+     
       sendEmail(nombre, correo, telefono, observaciones);
     } catch (error) {
       console.log(error);
